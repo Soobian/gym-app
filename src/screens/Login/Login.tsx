@@ -27,7 +27,7 @@ const Login = () => {
     <View style={styles.container}>
       <Header title="Welcome back!"/>
       <View style={styles.formContainer}>
-        <DefaultInput name="Email" isPassword={false} value={username} setFunction={setUsername}/>
+        <DefaultInput name="Email" isPassword={false} placeholder="email@domain.com" value={username} setFunction={setUsername}/>
         <DefaultInput name="Password" isPassword={true} value={password} setFunction={setPassword}/>
         <View style={{paddingVertical: 15, marginTop: 25}}>
           <DefaultButton title="Log In" onPress={handleLogin}/>

@@ -13,11 +13,12 @@ import { COLORS } from '../constants/colors';
 interface InputProps {
   name: string;
   isPassword: boolean;
+  placeholder?: string;
   value: string;
   setFunction: (value: string) => void;
 }
 
-const DefaultInput = ({name, isPassword, value, setFunction}: InputProps) => {
+const DefaultInput = ({name, isPassword, placeholder, value, setFunction}: InputProps) => {
   const window = useWindowDimensions();
 
   return (
@@ -27,6 +28,7 @@ const DefaultInput = ({name, isPassword, value, setFunction}: InputProps) => {
         style={[styles.input__textinput, SHADOWS, {width: window.width * 0.8}]}
         onChangeText={setFunction}
         value={value}
+        placeholder={placeholder}
         secureTextEntry={isPassword}
       />
     </View>
